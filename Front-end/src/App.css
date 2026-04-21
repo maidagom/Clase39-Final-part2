@@ -21,6 +21,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .app-header h1 {
@@ -29,6 +31,8 @@
   margin-bottom: 10px;
   font-weight: 700;
   text-align: left;
+  flex: 1;
+  min-width: 250px;
 }
 
 .app-header p {
@@ -42,7 +46,8 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .user-info span {
@@ -67,6 +72,8 @@
 .app-main {
   flex: 1;
   padding: 30px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contenedor {
@@ -77,15 +84,148 @@
   gap: 30px;
   align-items: start;
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
-@media (max-width: 768px) {
-  .contenedor {
-    grid-template-columns: 1fr;
+/* Tablets - 768px y arriba */
+@media (min-width: 768px) {
+  .app-header {
+    padding: 40px 30px;
   }
-  
+
+  .app-main {
+    padding: 40px 30px;
+  }
+
+  .contenedor {
+    padding: 0;
+  }
+}
+
+/* Dispositivos medianos - 1024px y arriba */
+@media (min-width: 1024px) {
+  .app-header {
+    padding: 50px 40px;
+  }
+
   .app-header h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+
+  .app-main {
+    padding: 50px 40px;
+  }
+
+  .contenedor {
+    gap: 40px;
+  }
+}
+
+/* Pantallas extra grandes */
+@media (min-width: 1440px) {
+  .app-header h1 {
+    font-size: 3rem;
+  }
+
+  .contenedor {
+    gap: 50px;
+  }
+}
+
+/* Teléfonos pequeños - hasta 480px */
+@media (max-width: 480px) {
+  .app-header {
+    padding: 20px 15px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .app-header p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .user-info {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .user-info span {
+    font-size: 0.85rem;
+  }
+
+  .btn-logout {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .app-main {
+    padding: 15px 15px;
+  }
+
+  .contenedor {
+    gap: 20px;
+    padding: 0;
+  }
+}
+
+/* Teléfonos medianos - 480px a 768px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .app-header {
+    padding: 25px 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .app-header p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .user-info {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .user-info span {
+    font-size: 0.9rem;
+  }
+
+  .btn-logout {
+    padding: 9px 18px;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  .app-main {
+    padding: 20px 15px;
+  }
+
+  .contenedor {
+    gap: 25px;
   }
 }
 

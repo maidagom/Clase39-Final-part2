@@ -5,6 +5,7 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .login-box {
@@ -16,6 +17,7 @@
   max-width: 450px;
   max-height: 90vh;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .tabs-container {
@@ -38,6 +40,8 @@
   border-bottom: 3px solid transparent;
   position: relative;
   top: 2px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .tab:hover:not(:disabled) {
@@ -59,6 +63,8 @@
   color: #333;
   margin-bottom: 25px;
   font-size: 24px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .formulario-login,
@@ -86,6 +92,9 @@
   border-radius: 5px;
   font-size: 14px;
   transition: border-color 0.3s;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
 }
 
 .grupo-formulario input:focus {
@@ -110,6 +119,8 @@
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-submit:hover:not(:disabled) {
@@ -129,6 +140,8 @@
   font-size: 14px;
   text-align: center;
   animation: slideDown 0.3s ease-out;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @keyframes slideDown {
@@ -154,19 +167,22 @@
   border: 1px solid #cfc;
 }
 
+/* Teléfonos pequeños - hasta 480px */
 @media (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+
   .login-box {
     padding: 20px;
     max-width: 100%;
+    border-radius: 8px;
+    max-height: 95vh;
   }
 
   .login-box h2 {
     font-size: 20px;
     margin-bottom: 20px;
-  }
-
-  .grupo-formulario {
-    gap: 5px;
   }
 
   .tabs-container {
@@ -176,5 +192,170 @@
   .tab {
     font-size: 12px;
     padding: 10px;
+  }
+
+  .grupo-formulario {
+    gap: 5px;
+  }
+
+  .grupo-formulario label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .grupo-formulario input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .btn-submit {
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .alerta {
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .formulario-login,
+  .formulario-registro {
+    gap: 15px;
+  }
+}
+
+/* Teléfonos medianos - 480px a 768px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-box {
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .login-box h2 {
+    font-size: 21px;
+    margin-bottom: 22px;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 11px;
+  }
+
+  .tabs-container {
+    margin-bottom: 25px;
+  }
+
+  .grupo-formulario label {
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+
+  .grupo-formulario input {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .btn-submit {
+    padding: 11px;
+    font-size: 15px;
+    margin-top: 9px;
+  }
+
+  .alerta {
+    font-size: 13px;
+    padding: 11px;
+  }
+}
+
+/* Tablets - 768px a 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-box {
+    padding: 35px;
+    max-width: 480px;
+  }
+
+  .login-box h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 11px;
+  }
+
+  .tabs-container {
+    margin-bottom: 28px;
+  }
+
+  .grupo-formulario label {
+    font-size: 13px;
+  }
+
+  .grupo-formulario input {
+    font-size: 14px;
+  }
+}
+
+/* Pantallas grandes - 1024px y arriba */
+@media (min-width: 1024px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-box {
+    max-width: 450px;
+    padding: 40px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .tabs-container {
+    margin-bottom: 30px;
+  }
+
+  .grupo-formulario label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .grupo-formulario input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .formulario-login,
+  .formulario-registro {
+    gap: 18px;
+  }
+
+  .btn-submit {
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .alerta {
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 }

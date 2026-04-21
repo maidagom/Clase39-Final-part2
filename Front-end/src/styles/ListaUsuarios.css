@@ -3,12 +3,16 @@
   background: #f5f5f5;
   border-radius: 8px;
   margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .lista-usuarios h2 {
   color: #333;
   margin-bottom: 20px;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .buscador {
@@ -25,6 +29,7 @@
   border-radius: 4px;
   font-size: 16px;
   transition: border-color 0.3s;
+  box-sizing: border-box;
 }
 
 .input-busqueda:focus {
@@ -39,6 +44,8 @@
   border-radius: 4px;
   margin-bottom: 15px;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .sin-resultados {
@@ -79,6 +86,8 @@
 .tabla-usuarios td {
   padding: 12px 15px;
   border-bottom: 1px solid #eee;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .tabla-usuarios tbody tr:hover {
@@ -95,6 +104,8 @@
   font-size: 14px;
   transition: background-color 0.3s;
   margin-right: 5px;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .btn-editar:hover {
@@ -110,6 +121,8 @@
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .btn-eliminar:hover {
@@ -133,6 +146,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .btn-paginacion:hover:not(:disabled) {
@@ -147,4 +162,101 @@
 .paginacion span {
   font-weight: 500;
   color: #333;
+  font-size: 14px;
+}
+
+/* Teléfonos pequeños - hasta 480px */
+@media (max-width: 480px) {
+  .lista-usuarios {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+
+  .lista-usuarios h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .buscador {
+    margin-bottom: 15px;
+  }
+
+  .input-busqueda {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .tabla-usuarios th,
+  .tabla-usuarios td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .tabla-usuarios th {
+    font-size: 11px;
+  }
+
+  .btn-editar,
+  .btn-eliminar {
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-right: 3px;
+  }
+
+  .error,
+  .sin-resultados,
+  .cargando {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .paginacion {
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .btn-paginacion {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .paginacion span {
+    font-size: 12px;
+  }
+}
+
+/* Teléfonos medianos - 480px a 768px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .lista-usuarios {
+    padding: 18px;
+  }
+
+  .lista-usuarios h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+  }
+
+  .input-busqueda {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .tabla-usuarios th,
+  .tabla-usuarios td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .btn-editar,
+  .btn-eliminar {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .btn-paginacion {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
 }

@@ -24,9 +24,28 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  @media (max-width: 1024px) {
+/* Tablets - 768px y arriba */
+@media (min-width: 768px) {
+  :root {
     font-size: 16px;
+  }
+}
+
+/* Teléfonos pequeños - hasta 480px */
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+  }
+}
+
+/* Teléfonos medianos - 480px a 768px */
+@media (min-width: 480px) and (max-width: 767px) {
+  :root {
+    font-size: 15px;
+    letter-spacing: 0.15px;
   }
 }
 
@@ -52,10 +71,11 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -77,22 +97,59 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
-  @media (max-width: 1024px) {
+}
+
+/* Teléfonos pequeños - hasta 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+    letter-spacing: -0.84px;
+    margin: 16px 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 0 0 6px;
+  }
+}
+
+/* Teléfonos medianos - 480px a 768px */
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 36px;
+    letter-spacing: -1.08px;
+    margin: 20px 0;
+  }
+
+  h2 {
     font-size: 20px;
   }
 }
+
+/* Tablets - 1024px y arriba */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+
 p {
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 code,
@@ -101,6 +158,7 @@ code,
   display: inline-flex;
   border-radius: 4px;
   color: var(--text-h);
+  word-break: break-word;
 }
 
 code {
@@ -108,4 +166,12 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  code {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
 }
