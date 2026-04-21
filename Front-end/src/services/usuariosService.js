@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/users";
+const API_URL = import.meta.env.Vite_api_url || "https://clase-3839.vercel.app/users";
 
 // Obtener todos los usuarios con filtros opcionales
 export async function obtenerUsuarios(busqueda = "", pagina = 1, limite = 10) {
