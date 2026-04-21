@@ -135,7 +135,7 @@
 }
 
 /* Teléfonos pequeños - hasta 480px */
-@media (max-width: 480px) {
+@media (max-width: 300px) {
   .app-header {
     padding: 20px 15px;
   }
