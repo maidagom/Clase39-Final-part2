@@ -167,8 +167,8 @@
   border: 1px solid #cfc;
 }
 
-/* Teléfonos pequeños - hasta 480px */
-@media (max-width: 480px) {
+/* Teléfonos pequeños - hasta 300px */
+@media (max-width: 300px) {
   .login-container {
     padding: 10px;
   }
