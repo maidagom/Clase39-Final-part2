@@ -169,7 +169,7 @@ code {
 }
 
 /* Teléfonos pequeños */
-@media (max-width: 480px) {
+@media (max-width: 300px) {
   code {
     font-size: 12px;
     padding: 3px 6px;
