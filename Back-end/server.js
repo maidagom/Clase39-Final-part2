@@ -1,7 +1,10 @@
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
 import { enrutador } from "./rutas/RutasUsuarios.js";
 import conectar from "./config/Basedatos.js";
+
+dotenv.config();
 
 const server = express();
 
