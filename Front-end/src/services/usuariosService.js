@@ -1,4 +1,4 @@
-const API_URL = "https://clase-3839.vercel.app";
+const API_URL = "https://clase-3839.vercel.app/users";
 
 // Obtener todos los usuarios con filtros opcionales
 export async function obtenerUsuarios(busqueda = "", pagina = 1, limite = 10) {
